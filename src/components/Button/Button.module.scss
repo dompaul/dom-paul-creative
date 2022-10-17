@@ -13,9 +13,9 @@
   align-self: flex-start;
 
   &--feature {
-    background-color: $primary;
+    background-image: $gradient-reduced;
     color: $white;
-    font-family: Inter;
+    font-weight: 700;
     display: block;
     min-width: 20rem;
     font-size: 2rem;
