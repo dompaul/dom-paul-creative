@@ -7,11 +7,12 @@ import styles from './Mock.module.scss';
 
 interface MockProps {
   url: string;
+  fallbackUrl?: string;
   modifier?: string;
   type: string;
 }
 
-export const Mock: React.FC<MockProps> = ({ url, modifier, type }) => {
+export const Mock: React.FC<MockProps> = ({ url, modifier, type, fallbackUrl }) => {
   return (
     <div
       className={cn(styles['mock'], {
@@ -23,6 +24,7 @@ export const Mock: React.FC<MockProps> = ({ url, modifier, type }) => {
         {type === 'video' ? (
           <video loop autoPlay muted className={cn(styles['mock__mock'])}>
             <source src={url} type="video/webm" />
+            <source src={fallbackUrl} type="video/mp4" />
           </video>
         ) : (
           <div
