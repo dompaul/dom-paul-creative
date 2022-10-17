@@ -13,6 +13,7 @@ export const Hero: React.FC = () => {
     <div className={cn(styles['hero'])}>
       <video loop autoPlay muted className={styles['hero__video']}>
         <source src="/images/bg-video17.webm" type="video/webm" />
+        <source src="/images/bg-video17.mp4" type="video/mp4" />
       </video>
       <div className={cn(styles['hero__content'])}>
         <h1 className={cn(styles['hero__title'])}>Hi. I'm Dom!</h1>
