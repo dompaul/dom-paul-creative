@@ -11,7 +11,7 @@ import styles from "./Hero.module.scss";
 export const Hero: React.FC = () => {
   return (
     <div className={cn(styles["hero"])}>
-      <video loop autoPlay muted className={styles["hero__video"]}>
+      <video loop playsInline autoPlay muted className={styles["hero__video"]}>
         {/* <source src="/images/bg-video17.webm" type="video/webm" /> */}
         <source src="/images/bg-video17.mp4" type="video/mp4" />
       </video>
@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
           Welcome to my website. I am a Web Designer & Developer that has spent
           the last 7 years building exciting digital experiences.
         </p>
-        <Button label="Start a Project" link="#contact" modifier="hero" />
+        {/* <Button label="Start a Project" link="#contact" modifier="hero" /> */}
       </div>
     </div>
   );

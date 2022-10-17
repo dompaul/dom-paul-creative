@@ -30,6 +30,13 @@
 }
 
 @font-face {
+  font-family: Comfortaa;
+  src: url("/font/Comfortaa-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
   font-family: Inter;
   src: url("/font/Inter-Bold.ttf") format("truetype");
   font-weight: 700;
@@ -114,5 +121,5 @@ h6 {
 }
 
 * {
-  font-family: "Raleway", sans-serif;
+  font-family: Comfortaa, "Inter", sans-serif;
 }
