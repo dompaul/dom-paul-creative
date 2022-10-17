@@ -27,8 +27,8 @@
 
   &__mock-image {
     max-width: 95rem;
-    padding-top: 56%;
     width: 100%;
+    padding-top: 5%;
     transform: translateY(-5px);
     position: relative;
 
@@ -95,10 +95,10 @@
         }
       }
 
-      #{$this}__mock {
-        width: 32rem;
-        transform: translateY(-1px);
-      }
+      // #{$this}__mock {
+      //   width: 32rem;
+      //   transform: translateY(-1px);
+      // }
     }
   }
 }

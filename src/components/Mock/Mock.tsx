@@ -20,7 +20,16 @@ export const Mock: React.FC<MockProps> = ({ url, modifier, type, fallbackUrl }) 
       })}
     >
       <div className={cn(styles['mock__frame'])}>
-        <Image src={frame} />
+      <div
+            style={{
+              width: '100%',
+              position: 'relative',
+            }}
+            className={cn(styles['mock__mock-image'])}
+          >
+            <Image src={frame} layout="responsive" />
+          </div>
+        
         {type === 'video' ? (
           <video playsInline loop autoPlay muted className={cn(styles['mock__mock'])}>
             <source src={url} type="video/webm" />
