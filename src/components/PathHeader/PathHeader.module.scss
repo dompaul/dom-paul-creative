@@ -10,6 +10,10 @@
   &--ready {
     opacity: 1;
     transform: translateY(0);
+
+    #{$this}__summary {
+      opacity: 1;
+    }
   }
 
   &__container {
@@ -73,6 +77,8 @@
     font-weight: 700;
     letter-spacing: -3px;
     margin-bottom: 2.4rem;
+    opacity: 0;
+    transition: opacity 0.5s ease 1s;
   }
 
   @media only screen and (max-width: $mobile) {
