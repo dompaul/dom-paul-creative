@@ -44,15 +44,17 @@ export const NavBar: React.FC<NavBarProps> = ({
         aria-label="navigation"
       >
         <div className="wrapper wrapper--nav">
-          <a href="/">
-            <span className={styles["nav-bar__logo"]}>
-              {!isActive && naked ? (
-                <Image src={Logo} width="65px" height="35px" />
-              ) : (
-                <Image src={LogoBlack} width="65px" height="35px" />
-              )}
-            </span>
-          </a>
+          {!isActive && (
+            <a href="/">
+              <span className={styles["nav-bar__logo"]}>
+                {naked ? (
+                  <Image src={Logo} width="65px" height="35px" />
+                ) : (
+                  <Image src={LogoBlack} width="65px" height="35px" />
+                )}
+              </span>
+            </a>
+          )}
 
           <div
             id="nav-icon3"
