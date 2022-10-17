@@ -7,7 +7,8 @@ import {
   LayoutType,
   NavOption,
 } from "models/Navigation";
-import LogoSVG from "../../assets/images/logo.png";
+import Logo from "../../assets/images/logo.png";
+import LogoBlack from "../../assets/images/logo-black.png";
 
 import styles from "./NavBar.module.scss";
 import React from "react";
@@ -45,7 +46,11 @@ export const NavBar: React.FC<NavBarProps> = ({
         <div className="wrapper wrapper--nav">
           <a href="/">
             <span className={styles["nav-bar__logo"]}>
-              <Image src={LogoSVG} width="65px" height="35px" />
+              {!isActive && naked ? (
+                <Image src={Logo} width="65px" height="35px" />
+              ) : (
+                <Image src={LogoBlack} width="65px" height="35px" />
+              )}
             </span>
           </a>
 
