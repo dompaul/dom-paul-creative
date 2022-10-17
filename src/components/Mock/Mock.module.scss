@@ -85,6 +85,10 @@
       #{$this}__frame {
         max-width: 45rem;
         padding: 0 3.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         &::after {
           transform: translateY(-2rem) scaleX(1);
