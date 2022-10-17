@@ -1,25 +1,30 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
 
-import { Footer } from 'components/Footer';
-import { NavBar } from 'components/NavBar';
-import { navigationMock } from 'models/Navigation/NavigationMock';
+import { Footer } from "components/Footer";
+import { NavBar } from "components/NavBar";
+import { navigationMock } from "models/Navigation/NavigationMock";
 
-import './Layout.module.scss';
+import "./Layout.module.scss";
 
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = "Next.js Sample Website";
 
 export const Layout: React.FC = ({ children }) => {
   const [scrollY, setScrollY] = React.useState(0);
 
   const onScroll = React.useCallback((event) => {
     setScrollY(Number(document.body.scrollTop));
+    if (Number(document.body.scrollTop) > 0) {
+      document.body.classList.add("scrolling");
+    } else {
+      document.body.classList.remove("scrolling");
+    }
   }, []);
 
   React.useEffect(() => {
-    document.body.addEventListener('scroll', onScroll, { passive: true });
+    document.body.addEventListener("scroll", onScroll, { passive: true });
     // remove event on unmount to prevent a memory leak
-    () => document.removeEventListener('scroll', onScroll);
+    () => document.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -33,7 +38,7 @@ export const Layout: React.FC = ({ children }) => {
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle,
+            siteTitle
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name="og:title" content={siteTitle} />

@@ -75,6 +75,16 @@
   left: 50%;
 }
 
+#nav-icon3.open span {
+  background: $primary;
+}
+
+.scrolling {
+  #nav-icon3 span {
+    background: $primary;
+  }
+}
+
 @media only screen and (min-width: $desktop) {
   #nav-icon3 {
     display: none;

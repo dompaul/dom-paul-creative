@@ -30,7 +30,6 @@
   background: linear-gradient(-45deg, #c3370c, #f87b0c, #e73c7e, #c3370c);
   background-size: 400% 400%;
   position: relative;
-  transform: translateY(-11rem);
   animation: gradient 10s ease infinite;
 
   &::after {
@@ -62,7 +61,7 @@
     max-width: 1500px;
     width: 100%;
     padding: 0 6.4rem;
-    top: 35%;
+    top: calc(27% + 11rem);
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);

@@ -15,7 +15,7 @@
     display: block;
     width: 100vw;
     background-color: $white;
-    transform: scaleX(1.9) translateY(-5rem);
+    transform: scaleX(1.9) translateY(0);
     min-height: 50rem;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
     position: absolute;
@@ -29,12 +29,12 @@
   }
 
   &__section {
-    transform: translateY(-22rem);
+    transform: translateY(-10rem);
   }
 
   @media only screen and (max-width: $desktop) {
     &__section {
-      transform: translateY(-13rem);
+      transform: translateY(0);
     }
 
     &__wrapper {
