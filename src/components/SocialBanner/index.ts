@@ -1,0 +1,1 @@
+export { SocialBanner } from './SocialBanner';

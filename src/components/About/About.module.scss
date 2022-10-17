@@ -1,0 +1,70 @@
+@import "../../stylesheets/variables";
+
+.about {
+  position: relative;
+  min-height: calc(79vh - 11rem);
+  height: auto;
+  display: flex;
+  background-color: $white;
+
+  &__media,
+  &__content {
+    position: relative;
+    width: 50%;
+  }
+
+  &__media {
+    display: flex;
+  }
+
+  &__content {
+    max-width: 70%;
+    padding: 6rem 7rem;
+    color: $black;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__quote {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    line-height: 5rem;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  @media only screen and (max-width: $desktop) {
+    height: auto;
+    flex-wrap: wrap;
+    min-height: auto;
+
+    &__media {
+      display: none;
+    }
+    &__content {
+      max-width: 100%;
+      padding: 3rem;
+    }
+    &__media,
+    &__content {
+      width: 100%;
+    }
+
+    &__quote {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+}

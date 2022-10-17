@@ -1,0 +1,133 @@
+@import "../../stylesheets/variables";
+
+.article-list {
+  $this: &;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &__list {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    column-gap: 2.4rem;
+    row-gap: 2.4rem;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__image-container {
+    &:before {
+      content: "";
+      padding-top: 60%;
+      display: block;
+      background-color: darken($grey-theme, 2%);
+    }
+  }
+
+  &__text-container {
+    padding: 2.4rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $black;
+  }
+
+  &__summary {
+    font-size: 1.4rem;
+    color: lighten($black, 40%);
+    margin: 1.2rem 0;
+    line-height: 2.4rem;
+  }
+
+  &__publish {
+    font-size: 1.4rem;
+    color: darken($dark-theme, 30%);
+    font-weight: bold;
+  }
+
+  &--2 {
+    #{$this}__list {
+      grid-template-columns: auto auto;
+    }
+  }
+
+  &--3 {
+    #{$this}__list {
+      grid-template-columns: auto auto auto;
+    }
+  }
+
+  &--5 {
+    #{$this}__list {
+      grid-template-columns: auto auto auto auto auto;
+    }
+  }
+
+  &--dark #{$this} {
+    &__item {
+      background-color: $dark-theme;
+    }
+
+    &__image-container:before {
+      background-color: $black;
+    }
+
+    &__title,
+    &__summary,
+    &__publish {
+      color: $white;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+
+    &:hover {
+      text-decoration: none;
+      font-style: normal;
+    }
+  }
+
+  @media only screen and (max-width: $desktop) {
+    &__list {
+      grid-template-columns: auto auto;
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    &--3 {
+      #{$this}__list {
+        grid-template-columns: auto;
+      }
+
+      #{$this}__image-container {
+        &:before {
+          padding-top: 40%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    &--2,
+    &--3,
+    &--4 {
+      #{$this}__list {
+        grid-template-columns: auto;
+      }
+
+      #{$this}__image-container {
+        &:before {
+          padding-top: 60%;
+        }
+      }
+    }
+  }
+}

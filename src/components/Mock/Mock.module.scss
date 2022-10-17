@@ -1,0 +1,94 @@
+@import "../../stylesheets/variables";
+@import "../../stylesheets/animations";
+
+.mock {
+  $this: &;
+
+  &--home {
+    transform: translateY(-22rem);
+  }
+
+  &--feature {
+    #{$this}__frame {
+      margin-bottom: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__mock {
+    max-width: 95rem;
+    width: 100%;
+    transform: translateY(-5px);
+    position: relative;
+  }
+
+  &__mock-image {
+    max-width: 95rem;
+    padding-top: 56%;
+    width: 100%;
+    transform: translateY(-5px);
+    position: relative;
+
+    > span {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  &__frame {
+    position: relative;
+    max-width: 95rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+    margin-bottom: -30rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 20rem;
+      width: 100%;
+      background-color: $white;
+      z-index: $level-one;
+      transform: translateY(-11rem) scaleX(1.6);
+      filter: blur(2.5rem);
+    }
+  }
+
+  @media only screen and (max-width: $desktop) {
+    &--home {
+      #{$this}__frame {
+        max-width: 75rem;
+        padding: 0 4.4rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    &--home {
+      #{$this}__frame::after {
+        transform: translateY(-2rem) scaleX(1.6);
+        filter: blur(1rem);
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    &--home {
+      #{$this}__frame {
+        max-width: 45rem;
+        padding: 0 4.4rem;
+
+        &::after {
+          transform: translateY(-2rem) scaleX(1);
+        }
+      }
+    }
+  }
+}

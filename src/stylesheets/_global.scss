@@ -1,0 +1,133 @@
+@import "./variables";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 10px;
+  min-height: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  text-rendering: optimizelegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// .widget {
+//   position: relative;
+//   z-index: $level-two;
+//   background-color: $white;
+//   margin-bottom: 2rem;
+
+//   &--no-overflow {
+//     overflow: hidden;
+//   }
+// }
+
+.widget {
+  margin-top: 4rem;
+}
+
+.logo {
+  z-index: 10;
+}
+
+.list-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -130px;
+  visibility: hidden;
+
+  @media only screen and (max-width: $desktop) {
+    top: -90px;
+  }
+}
+
+.body {
+  // background-color: $white;
+  background-color: rgba(#f1e9dc, 0.7);
+  background-color: lighten($gold, 5%);
+  max-width: 2000px;
+  margin: 0 auto;
+  position: relative;
+  // box-shadow: 0 3px 40px rgba($black, 0.2);
+  z-index: $level-two;
+  display: block;
+  height: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 4.6rem auto;
+
+  &--nav {
+    margin: 0 6.4rem;
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    align-items: center;
+
+    @media only screen and (max-width: $desktop) {
+      margin: 0 3.4rem;
+    }
+  }
+
+  &--first {
+    margin-top: 0;
+  }
+
+  &--last {
+    margin-bottom: 0;
+  }
+
+  // &--bg {
+  //   position: relative;
+  //   &::before {
+  //     position: absolute;
+  //     left: 0;
+  //     top: 0;
+  //     content: "";
+  //     display: block;
+  //     width: 100vw;
+  //     height: 100%;
+  //     background-color: red;
+  //     // margin-left: -6.4rem;
+  //   }
+  // }
+}
+
+.main-content {
+  // margin: 0 2.4rem;
+
+  // @media only screen and (max-width: $desktop) {
+  //   margin: 0 1rem;
+  // }
+}
+
+#tsparticles canvas {
+  pointer-events: none !important;
+}

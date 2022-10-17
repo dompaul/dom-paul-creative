@@ -1,0 +1,46 @@
+@import "../../stylesheets/variables";
+@import "../../stylesheets/animations";
+
+.content {
+  width: 100vw;
+  position: relative;
+  animation: fadeInContent;
+  opacity: 0;
+  animation-duration: 0.45s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100vw;
+    background-color: $white;
+    transform: scaleX(1.9) translateY(-5rem);
+    min-height: 50rem;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    position: absolute;
+  }
+
+  &__wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 6.4rem;
+  }
+
+  &__section {
+    transform: translateY(-22rem);
+  }
+
+  @media only screen and (max-width: $desktop) {
+    &__section {
+      transform: translateY(-13rem);
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    &::before {
+      transform: scaleX(3) translateY(-10rem);
+    }
+  }
+}

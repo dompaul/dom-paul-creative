@@ -1,0 +1,69 @@
+@import "../../stylesheets/variables";
+
+.pricing {
+  width: 100%;
+  padding: 2rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+
+  &__ranges {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__option {
+    // border-radius: 1rem;
+    background-color: $white;
+    box-shadow: 0 1px 20px rgba($black, 0.08);
+  }
+
+  &__header {
+    width: 100%;
+    position: relative;
+  }
+
+  &__option-title {
+    font-size: 2.4rem;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  &__range-option {
+    width: 100%;
+    display: flex;
+    padding: 2.4rem 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    // border-bottom: solid 1px rgba(200, 200, 200, 0.6);
+  }
+
+  &__range-name {
+    font-size: 2rem;
+  }
+
+  &__range-price {
+    font-size: 1.8rem;
+  }
+
+  @media only screen and (max-width: $desktop) {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

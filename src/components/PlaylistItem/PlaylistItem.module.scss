@@ -1,0 +1,114 @@
+@import "../../stylesheets/variables";
+
+.playlist-item {
+  $this: &;
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: solid 2px $gold;
+    width: calc(100% - 0.4rem);
+    height: calc(100% - 0.4rem);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: $level-two;
+  }
+
+  &--selected {
+    &::after {
+      opacity: 1;
+    }
+    #{$this}__image-container:before {
+      background-color: $gold;
+      opacity: 0.5;
+    }
+  }
+
+  &:hover {
+    #{$this}__image-container:before {
+      opacity: 0.6;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__image-container {
+    height: 100%;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $black;
+      opacity: 0.7;
+      user-select: none;
+      pointer-events: none;
+      height: 100%;
+      width: 100%;
+      z-index: $level-one;
+      transition: opacity 0.25s ease;
+    }
+  }
+
+  &__image-container,
+  &__text-container {
+    width: 100%;
+    position: relative;
+  }
+
+  &__text-container {
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    z-index: $level-two;
+    justify-content: center;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    left: 0;
+  }
+
+  &__title {
+    font-size: 3rem;
+    color: $white;
+  }
+
+  @media only screen and (max-width: $desktop) {
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__text-container {
+      img {
+        width: 50px !important;
+        height: 50px !important;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    &__title {
+      font-size: 1.6rem;
+    }
+
+    &__text-container {
+      img {
+        width: 30px !important;
+        height: 30px !important;
+      }
+    }
+  }
+}

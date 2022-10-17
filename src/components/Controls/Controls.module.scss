@@ -1,0 +1,91 @@
+@import "../../stylesheets/variables";
+
+.controls {
+  $this: &;
+
+  &--slider {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2.4rem;
+    // margin-top: -4.4rem;
+    // transform: translateY(-2.4rem);
+
+    #{$this} {
+      &__button {
+        background-color: $dark-grey-theme;
+        width: 4.4rem;
+        height: 4.4rem;
+        border: none;
+        border-radius: 4.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &--prev {
+          margin-right: 1.2rem;
+        }
+
+        &:disabled {
+          opacity: 0.4;
+        }
+
+        &:hover:not(:disabled) {
+          background-color: darken($dark-grey-theme, 10%);
+        }
+      }
+    }
+  }
+
+  &--hero-carousel #{$this} {
+    &__button {
+      position: absolute;
+      z-index: $level-two;
+      top: 50%;
+      transform: translateY(-50%);
+      outline: none;
+      background-color: $black;
+      opacity: 0.4;
+      border: none;
+      width: 4.4rem;
+      height: 4.4rem;
+      border-radius: 4.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+
+      &--prev {
+        left: 0;
+        right: auto;
+
+        &:hover {
+          opacity: 1;
+          transform: translate(-1rem, -50%);
+        }
+      }
+
+      &--next {
+        right: 0;
+        left: auto;
+
+        &:hover {
+          opacity: 1;
+          transform: translate(1rem, -50%);
+        }
+      }
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    &--slider {
+      display: none;
+    }
+  }
+}
