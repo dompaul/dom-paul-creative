@@ -40,7 +40,7 @@
 
   @media only screen and (max-width: $mobile) {
     &::before {
-      transform: scaleX(3) translateY(-16rem);
+      transform: scaleX(3) translateY(-7rem);
     }
     &__wrapper {
       padding: 0 3.4rem;
