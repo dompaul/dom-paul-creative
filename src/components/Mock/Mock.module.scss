@@ -95,8 +95,9 @@
         }
       }
 
-      &__mock {
-        width: 30rem;
+      #{$this}__mock {
+        width: 32rem;
+        transform: translateY(-1px);
       }
     }
   }
