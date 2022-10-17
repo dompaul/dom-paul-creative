@@ -43,7 +43,7 @@ export const Mock: React.FC<MockProps> = ({ url, modifier, type, fallbackUrl }) 
               position: 'relative',
               boxShadow: '0 1px 10px rgba(0, 0, 0, 0.2)',
             }}
-            className={cn(styles['mock__mock-image'])}
+            className={cn(styles['mock__mock-image'], styles['mock__mock-image--image'])}
           >
             <Image src={url} width="100%" height="100%" layout="responsive" />
           </div>

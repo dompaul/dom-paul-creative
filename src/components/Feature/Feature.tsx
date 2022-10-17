@@ -40,7 +40,7 @@ export const Feature: React.FC<FeatureProps> = ({
           <Button modifier="feature" label="Visit Website" link={link} />
         </div>
         <div className={cn(styles['feature__image-container'])}>
-          <Mock modifier="feature" url={image} type="image" />
+          <Mock modifier={inverted ? 'feature-inverted' : 'feature'} url={image} type="image" />
         </div>
       </div>
     </div>

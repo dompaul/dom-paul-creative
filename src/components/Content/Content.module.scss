@@ -36,6 +36,10 @@
     &__section {
       transform: translateY(-13rem);
     }
+
+    &__wrapper {
+      padding: 0 4.4rem;
+    }
   }
 
   @media only screen and (max-width: $mobile) {
