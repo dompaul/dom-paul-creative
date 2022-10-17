@@ -81,7 +81,7 @@
 
   @media only screen and (max-width: $mobile) {
     &--home {
-      transform: translateY(-30rem);
+      transform: translateY(-25rem);
       #{$this}__frame {
         max-width: 45rem;
         padding: 0 3.4rem;
@@ -93,6 +93,10 @@
         &::after {
           transform: translateY(-2rem) scaleX(1);
         }
+      }
+
+      &__mock {
+        width: 30rem;
       }
     }
   }
