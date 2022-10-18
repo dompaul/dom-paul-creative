@@ -6,13 +6,13 @@ export const featuresMock: Feature[] = [
     image: "/images/the-chicken-website-mock.png",
     link: "https://www.thechickenwebsite.com/",
     text:
-      "An all-new identity and website. Making careful use of their extensive library of client imagery, this was a ground-up build using Gatsby, Contentful, and Netlify for this world-leading licensing company.",
+      "The Chicken Website is a recipe website that specialises in serving “chicken only” recipes. This was a full-stack project that I built from scratch, including the frontend and backend development. The project utilises an API database with over 300,000 recipes. If you are hungry for some chicken, check-it-out!",
   },
   {
     title: "Spa Ur Self",
     image: "/images/spa-ur-self-mock.png",
     link: "https://spa-ur-self.com/",
     text:
-      "An all-new identity and website. Making careful use of their extensive library of client imagery, this was a ground-up build using Gatsby, Contentful, and Netlify for this world-leading licensing company.",
+      "Spa Ur Self are a new company transforming the normal shower into an extra-ordinary shower. They have a new product hitting the market and needed a website to showcase their vision, their idea and their products. It was fun working on this project, the goal was to create something engaging yet informative.",
   },
 ];

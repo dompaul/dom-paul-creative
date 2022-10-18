@@ -26,8 +26,8 @@ const Home: React.FC = () => (
       <FeatureWrapper features={featuresMock} />
 
       {/* About section here */}
-      <a className="anchor" id="about"></a>
-      <PathHeader title="About" summary="Learn More" />
+      {/* <a className="anchor" id="about"></a>
+      <PathHeader title="About" summary="Learn More" /> */}
 
       {/* Contact section here */}
       <a className="anchor" id="contact"></a>
