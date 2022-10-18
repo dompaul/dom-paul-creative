@@ -7,7 +7,7 @@ import { navigationMock } from "models/Navigation/NavigationMock";
 
 import "./Layout.module.scss";
 
-export const siteTitle = "Dom Paul Creative";
+export const siteTitle = "Hi. I'm Dom!";
 
 export const Layout: React.FC = ({ children }) => {
   const [scrollY, setScrollY] = React.useState(0);
@@ -33,7 +33,7 @@ export const Layout: React.FC = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="I am a Creative Web Designer / Developer. So if you need a website to launch a new idea or new business, get in touch! "
+          content="I am a Web Designer & Developer that has spent the last 7 years building exciting digital experiences."
         />
         <meta
           property="og:image"
