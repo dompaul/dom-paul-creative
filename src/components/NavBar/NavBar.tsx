@@ -65,7 +65,6 @@ export const NavBar: React.FC<NavBarProps> = ({
             <span></span>
             <span></span>
             <span></span>
-            <span></span>
           </div>
           <ul className={styles["nav-bar__list"]}>
             {options.map(({ label, link }, index) => (
