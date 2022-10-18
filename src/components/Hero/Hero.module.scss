@@ -90,7 +90,7 @@
     font-family: Comfortaa;
     text-align: center;
     max-width: 65rem;
-    font-weight: 700;
+    font-weight: 400;
     opacity: 0;
     animation: fadeIn;
     animation-duration: 0.45s;
@@ -124,7 +124,7 @@
     }
 
     &__content {
-      padding: 0 1.4rem;
+      padding: 0 2.4rem;
     }
   }
 }

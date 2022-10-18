@@ -66,6 +66,7 @@
     font-size: 2rem;
     line-height: 3.4rem;
     max-width: 45rem;
+    font-weight: 400;
   }
 
   &--ready {
@@ -143,6 +144,11 @@
       font-size: 3.2rem;
       line-height: 3.2rem;
       letter-spacing: -2px;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      line-height: 3rem;
     }
   }
 }
