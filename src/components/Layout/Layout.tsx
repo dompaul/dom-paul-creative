@@ -51,15 +51,14 @@ export const Layout: React.FC = ({ children }) => {
       </Head>
       <main>
         <NavBar options={navigationMock} naked={scrollY === 0} />
-
         <div className="main-content">{children}</div>
+        <Footer
+          text="Copyright 2022. Dom Paul Creative"
+          color="dark"
+          email="hello@dompaulcreative.com"
+          phone="07933426346"
+        />
       </main>
-      <Footer
-        text="Copyright 2022. Dom Paul Creative"
-        color="dark"
-        email="hello@dompaulcreative.com"
-        phone="07933426346"
-      />
     </>
   );
 };

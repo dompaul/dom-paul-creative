@@ -32,10 +32,8 @@ const Home: React.FC = () => (
       {/* Contact section here */}
       <a className="anchor" id="contact"></a>
       <PathHeader title="Contact" summary="Get in Touch" />
-      <SignUpForm variant="1" />
+      <SignUpForm variant="2" />
     </Content>
-
-    <div className="body"></div>
   </Layout>
 );
 

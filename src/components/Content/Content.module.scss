@@ -9,6 +9,7 @@
   animation-duration: 0.45s;
   animation-delay: 0.7s;
   animation-fill-mode: forwards;
+  margin-bottom: -5rem;
 
   &::before {
     content: "";
@@ -48,6 +49,8 @@
     animation-duration: 0.45s;
     animation-delay: 0.7s;
     animation-fill-mode: forwards;
+    margin-bottom: -15rem;
+
     &::before {
       transform: scaleX(3) translateY(-4rem);
     }
@@ -55,7 +58,7 @@
       padding: 0 1.4rem;
     }
     &__section {
-      transform: translateY(-1%);
+      transform: translateY(0%);
     }
   }
 }
