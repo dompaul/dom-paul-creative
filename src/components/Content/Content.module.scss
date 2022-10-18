@@ -43,6 +43,11 @@
   }
 
   @media only screen and (max-width: $mobile) {
+    animation: fadeInContentMobile;
+    opacity: 0;
+    animation-duration: 0.45s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
     &::before {
       transform: scaleX(3) translateY(-4rem);
     }
