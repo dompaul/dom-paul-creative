@@ -54,7 +54,12 @@ export const Layout: React.FC = ({ children }) => {
 
         <div className="main-content">{children}</div>
       </main>
-      {/* <Footer text="Copyright 2022. Dom Paul Creative" color="white" /> */}
+      <Footer
+        text="Copyright 2022. Dom Paul Creative"
+        color="dark"
+        email="hello@dompaulcreative.com"
+        phone="07933426346"
+      />
     </>
   );
 };

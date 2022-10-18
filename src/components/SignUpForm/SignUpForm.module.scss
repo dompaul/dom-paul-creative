@@ -59,6 +59,16 @@
     width: 100%;
     cursor: pointer;
     height: 6.2rem;
+
+    background-image: $gradient-reduced;
+    color: $white;
+    font-weight: 700;
+    display: block;
+    min-width: 20rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2.4rem;
+    border-radius: 3.4rem;
   }
 
   &__date-picker {

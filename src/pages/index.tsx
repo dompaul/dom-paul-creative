@@ -7,6 +7,7 @@ import { Content } from "../components/Content";
 import { PathHeader } from "../components/PathHeader";
 import { ServiceWrapper } from "components/ServiceWrapper";
 import { FeatureWrapper } from "components/FeatureWrapper";
+import { SignUpForm } from "components/SignUpForm";
 import { servicesMock } from "models/Service";
 import { featuresMock } from "models/Feature";
 
@@ -31,6 +32,7 @@ const Home: React.FC = () => (
       {/* Contact section here */}
       <a className="anchor" id="contact"></a>
       <PathHeader title="Contact" summary="Get in Touch" />
+      <SignUpForm variant="1" />
     </Content>
 
     <div className="body"></div>

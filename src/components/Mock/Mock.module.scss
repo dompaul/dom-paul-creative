@@ -97,6 +97,7 @@
 
   @media only screen and (max-width: $tablet) {
     &--home {
+      display: none;
       #{$this}__frame::after {
         transform: translateY(-2rem) scaleX(1.6);
         filter: blur(1rem);
