@@ -7,7 +7,7 @@ import { navigationMock } from "models/Navigation/NavigationMock";
 
 import "./Layout.module.scss";
 
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "Dom Paul Creative";
 
 export const Layout: React.FC = ({ children }) => {
   const [scrollY, setScrollY] = React.useState(0);
@@ -33,7 +33,7 @@ export const Layout: React.FC = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="I am a Creative Web Designer / Developer. So if you need a website to launch a new idea or new business, get in touch! "
         />
         <meta
           property="og:image"

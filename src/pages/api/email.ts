@@ -19,7 +19,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const message = await client.sendAsync({
       text: "",
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      to: "hello@dompaulcreative.com",
       subject: `Enquiry - ${name}`,
       attachment: [
         {
