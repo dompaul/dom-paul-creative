@@ -47,10 +47,10 @@ interface SignUpFormProps {
 const TOAST_CONFIG: ToastOptions = {
   position: "bottom-center",
   autoClose: 5000,
-  hideProgressBar: false,
+  hideProgressBar: true,
   closeOnClick: true,
   pauseOnHover: true,
-  draggable: true,
+  draggable: false,
   progress: undefined,
 };
 
@@ -87,9 +87,9 @@ export const SignUpForm: React.FC<SignUpFormProps> = ({ variant = "2" }) => {
         "/api/email",
         {
           name: data.name,
-          companyName: data.company,
-          businessEmail: data.email,
-          businessMobile: data.phone,
+          company: data.company,
+          email: data.email,
+          phone: data.phone,
           message: data.message,
         },
         {
@@ -109,7 +109,6 @@ export const SignUpForm: React.FC<SignUpFormProps> = ({ variant = "2" }) => {
 
   return (
     <div className={styles["sign-up-form-container"]}>
-      <ToastContainer style={{ width: "300px", height: "60px" }} />
       <form
         className={cn(styles["sign-up-form"], {
           [styles[`sign-up-form--${variant}`]]: variant,

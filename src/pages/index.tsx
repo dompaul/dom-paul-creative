@@ -10,6 +10,7 @@ import { FeatureWrapper } from "components/FeatureWrapper";
 import { SignUpForm } from "components/SignUpForm";
 import { servicesMock } from "models/Service";
 import { featuresMock } from "models/Feature";
+import { ToastContainer } from "react-toastify";
 
 const Home: React.FC = () => (
   <Layout>
@@ -34,6 +35,7 @@ const Home: React.FC = () => (
       <PathHeader title="Contact" summary="Get in Touch" />
       <SignUpForm variant="2" />
     </Content>
+    <ToastContainer style={{ width: "350px" }} />
   </Layout>
 );
 
