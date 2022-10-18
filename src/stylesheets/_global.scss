@@ -78,6 +78,11 @@ img {
   height: 100%;
 }
 
+a[href^="tel"] {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 4.6rem auto;
