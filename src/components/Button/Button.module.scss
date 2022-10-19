@@ -11,6 +11,7 @@
   position: relative;
   flex-shrink: 0;
   align-self: flex-start;
+  cursor: pointer;
 
   &--feature {
     background-image: $gradient-reduced;
