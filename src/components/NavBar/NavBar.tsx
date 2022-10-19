@@ -7,8 +7,8 @@ import {
   LayoutType,
   NavOption,
 } from "models/Navigation";
-import Logo from "../../assets/images/logo.png";
-import LogoBlack from "../../assets/images/logo-black.png";
+import Logo from "../../assets/images/logo.webp";
+import LogoBlack from "../../assets/images/logo-black.webp";
 
 import styles from "./NavBar.module.scss";
 import React from "react";
@@ -49,9 +49,9 @@ export const NavBar: React.FC<NavBarProps> = ({
             <a href="/">
               <span className={styles["nav-bar__logo"]}>
                 {naked ? (
-                  <Image src={Logo} width="65px" height="35px" />
+                  <Image src={Logo} width="65px" height="35px" alt="dpc" />
                 ) : (
-                  <Image src={LogoBlack} width="65px" height="35px" />
+                  <Image src={LogoBlack} width="65px" height="35px" alt="dpc" />
                 )}
               </span>
             </a>

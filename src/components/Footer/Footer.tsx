@@ -2,7 +2,7 @@ import cn from "classnames";
 import Image from "next/image";
 
 import { ColourType } from "models/Navigation";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/images/logo.webp";
 
 import styles from "./Footer.module.scss";
 
@@ -32,6 +32,7 @@ export const Footer: React.FC<FooterProps> = ({
           src={Logo}
           width="205px"
           height="105px"
+          alt="dpc"
         />
         <ul className={cn(styles["footer__content-list"])}>
           <li className={cn(styles["footer__content-item"])}>{email}</li>

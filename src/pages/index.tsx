@@ -17,12 +17,12 @@ const Home: React.FC = () => (
     <Hero />
     <Content>
       {/* Services section here */}
-      <a className="anchor" id="services"></a>
+      <div className="anchor" id="services"></div>
       <PathHeader title="Services" summary="What I Do" />
       <ServiceWrapper services={servicesMock} />
 
       {/* Portfolio section here */}
-      <a className="anchor" id="work"></a>
+      <div className="anchor" id="work"></div>
       <PathHeader title="Work" summary="My Portfolio" />
       <FeatureWrapper features={featuresMock} />
 
@@ -31,7 +31,7 @@ const Home: React.FC = () => (
       <PathHeader title="About" summary="Learn More" /> */}
 
       {/* Contact section here */}
-      <a className="anchor" id="contact"></a>
+      <div className="anchor" id="contact"></div>
       <PathHeader title="Contact" summary="Get in Touch" />
       <SignUpForm variant="2" />
     </Content>

@@ -26,11 +26,11 @@ export const PathHeader: React.FC<PathHeaderProps> = ({ title, summary }) => {
       <div className={cn(styles["path-header__container"])}>
         <span className={cn(styles["path-header__path"])}></span>
         <span className={cn(styles["path-header__ball"])}></span>
-        <h3 className={cn(styles["path-header__title"])}>
+        <h1 className={cn(styles["path-header__title"])}>
           <span className={cn(styles["path-header__title-gradient"])}>
             {title}
           </span>
-        </h3>
+        </h1>
         <p className={cn(styles["path-header__summary"])}>{summary}</p>
       </div>
     </div>
