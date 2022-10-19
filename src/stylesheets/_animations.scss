@@ -20,6 +20,17 @@
   }
 }
 
+@keyframes fadeInContentTablet {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-2%);
+  }
+}
+
 @keyframes fadeInContentMobile {
   from {
     opacity: 0;
@@ -27,7 +38,7 @@
   }
   to {
     opacity: 1;
-    transform: translateY(-5%);
+    transform: translateY(-3.5%);
   }
 }
 

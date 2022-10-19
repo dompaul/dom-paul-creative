@@ -43,6 +43,14 @@
     }
   }
 
+  @media only screen and (max-width: $tablet) {
+    animation: fadeInContentTablet;
+    opacity: 0;
+    animation-duration: 0.45s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+  }
+
   @media only screen and (max-width: $mobile) {
     animation: fadeInContentMobile;
     opacity: 0;
