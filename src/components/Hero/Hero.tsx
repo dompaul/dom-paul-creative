@@ -1,10 +1,7 @@
 import cn from "classnames";
 import Image from "next/image";
-import TypeAnimation from "react-type-animation";
 
 import { Button } from "components/Button";
-import { Bubbles } from "components/Bubbles";
-import { MediaType } from "models/Media";
 
 import styles from "./Hero.module.scss";
 
