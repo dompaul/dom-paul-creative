@@ -39,7 +39,6 @@ export const NavBar: React.FC<NavBarProps> = ({
           [styles[`nav-bar--${color}`]]: color,
           [styles[`nav-bar--${align}`]]: align,
           [styles["nav-bar--naked"]]: naked,
-          [styles["nav-bar--no-shadow"]]: isActive,
         })}
         role="navigation"
         aria-label="navigation"

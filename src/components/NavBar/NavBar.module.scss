@@ -6,12 +6,12 @@
   justify-content: center;
   z-index: $level-two;
   height: 11rem;
-  background-color: rgba($white, 1);
+  background-color: $white;
   align-items: center;
   position: fixed;
   width: 100%;
   top: 0;
-  transition: background-color 0.25s ease;
+  transition: background-color 0.1s ease;
 
   &__list {
     display: flex;
@@ -133,10 +133,6 @@
     #{$this}__link {
       color: $white;
     }
-  }
-
-  &--no-shadow {
-    box-shadow: 0 0 10px rgba($black, 0);
   }
 
   @media only screen and (max-width: $desktop) {
