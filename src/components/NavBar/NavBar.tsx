@@ -31,6 +31,23 @@ export const NavBar: React.FC<NavBarProps> = ({
   const [isActive, setActive] = React.useState<boolean>(false);
   const handleToggle = () => setActive(!isActive);
 
+  const [scrollY, setScrollY] = React.useState(0);
+
+  const onScroll = React.useCallback((event) => {
+    setScrollY(Number(document.body.scrollTop));
+    if (Number(document.body.scrollTop) > 0) {
+      document.body.classList.add("scrolling");
+    } else {
+      document.body.classList.remove("scrolling");
+    }
+  }, []);
+
+  React.useEffect(() => {
+    document.body.addEventListener("scroll", onScroll, { passive: true });
+    // remove event on unmount to prevent a memory leak
+    () => document.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       <nav
@@ -38,7 +55,7 @@ export const NavBar: React.FC<NavBarProps> = ({
           [styles[`nav-bar--${layout}`]]: layout,
           [styles[`nav-bar--${color}`]]: color,
           [styles[`nav-bar--${align}`]]: align,
-          [styles["nav-bar--naked"]]: naked,
+          [styles["nav-bar--naked"]]: scrollY === 0,
         })}
         role="navigation"
         aria-label="navigation"
@@ -47,11 +64,12 @@ export const NavBar: React.FC<NavBarProps> = ({
           {!isActive && (
             <a href="/">
               <span className={styles["nav-bar__logo"]}>
-                {naked ? (
-                  <Image src={Logo} width="65px" height="35px" alt="dpc" />
-                ) : (
-                  <Image src={LogoBlack} width="65px" height="35px" alt="dpc" />
-                )}
+                <Image
+                  src={scrollY === 0 ? Logo : LogoBlack}
+                  width="65px"
+                  height="35px"
+                  alt="dpc"
+                />
               </span>
             </a>
           )}

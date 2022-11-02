@@ -10,23 +10,6 @@ import "./Layout.module.scss";
 export const siteTitle = "Hi. I'm Dom!";
 
 export const Layout: React.FC = ({ children }) => {
-  const [scrollY, setScrollY] = React.useState(0);
-
-  const onScroll = React.useCallback((event) => {
-    setScrollY(Number(document.body.scrollTop));
-    if (Number(document.body.scrollTop) > 0) {
-      document.body.classList.add("scrolling");
-    } else {
-      document.body.classList.remove("scrolling");
-    }
-  }, []);
-
-  React.useEffect(() => {
-    document.body.addEventListener("scroll", onScroll, { passive: true });
-    // remove event on unmount to prevent a memory leak
-    () => document.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <>
       <Head>
@@ -50,7 +33,7 @@ export const Layout: React.FC = ({ children }) => {
         <title>Dom Paul Creative</title>
       </Head>
       <main>
-        <NavBar options={navigationMock} naked={scrollY === 0} />
+        <NavBar options={navigationMock} naked={true} />
         <div className="main-content">{children}</div>
         <Footer
           text="Copyright 2022. Dom Paul Creative"
