@@ -62,12 +62,12 @@ export const NavBar: React.FC<NavBarProps> = ({
       >
         <div className="wrapper wrapper--nav">
           {!isActive && (
-            <a href="/">
+            <a href="/" className={styles["nav-bar__logo-link"]}>
               <span className={styles["nav-bar__logo"]}>
                 <Image
                   src={scrollY === 0 ? Logo : LogoBlack}
-                  width="65px"
-                  height="35px"
+                  width={65}
+                  height={35}
                   alt="dpc"
                 />
               </span>

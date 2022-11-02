@@ -20,8 +20,20 @@
   }
 
   &__logo {
-    display: inline-block;
     margin-left: 0;
+  }
+
+  &__logo,
+  &__logo-link {
+    display: block;
+    width: 6.5rem;
+    height: 3.5rem;
+
+    img,
+    span {
+      width: 6.5rem !important;
+      height: 3.5rem !important;
+    }
   }
 
   &__item {
