@@ -1,14 +1,40 @@
+import React from "react";
 import cn from "classnames";
-import Image from "next/image";
 
 import { Button } from "components/Button";
 
 import styles from "./Hero.module.scss";
 
 export const Hero: React.FC = () => {
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  const onScroll = React.useCallback(() => {
+    const { pageYOffset } = window;
+    if (pageYOffset > 0) {
+      videoRef.current.pause();
+      return;
+    } else if (pageYOffset === 0) {
+      videoRef.current.play();
+      return;
+    }
+    return;
+  }, []);
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", onScroll, { passive: true });
+    // remove event on unmount to prevent a memory leak
+    () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div className={cn(styles["hero"])}>
-      <video loop autoPlay muted className={styles["hero__video"]}>
+      <video
+        ref={videoRef}
+        loop
+        autoPlay
+        muted
+        className={styles["hero__video"]}
+      >
         <source src="/videos/bg.webm" type="video/webm" />
         <source src="/videos/bg.mp4" type="video/mp4" />
       </video>
