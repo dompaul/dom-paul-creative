@@ -8,7 +8,7 @@ import styles from "./Hero.module.scss";
 export const Hero: React.FC = () => {
   return (
     <div className={cn(styles["hero"])}>
-      <video loop playsInline autoPlay muted className={styles["hero__video"]}>
+      <video loop autoPlay muted className={styles["hero__video"]}>
         <source src="/videos/bg.webm" type="video/webm" />
         <source src="/videos/bg.mp4" type="video/mp4" />
       </video>
