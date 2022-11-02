@@ -8,8 +8,8 @@ body {
     Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 10px;
-  min-height: 100%;
-  height: 100%;
+  // min-height: 100%;
+  // height: 100%;
   overflow-x: hidden;
   text-rendering: optimizelegibility;
 }
@@ -75,7 +75,7 @@ img {
   position: relative;
   z-index: $level-two;
   display: block;
-  height: 100%;
+  // height: 100%;
 }
 
 a[href^="tel"] {

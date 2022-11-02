@@ -30,22 +30,17 @@ export const NavBar: React.FC<NavBarProps> = ({
 }) => {
   const [isActive, setActive] = React.useState<boolean>(false);
   const handleToggle = () => setActive(!isActive);
+  const [scrollTop, setScrollTop] = React.useState<boolean>(true);
 
-  const [scrollY, setScrollY] = React.useState(0);
-
-  const onScroll = React.useCallback((event) => {
-    setScrollY(Number(document.body.scrollTop));
-    if (Number(document.body.scrollTop) > 0) {
-      document.body.classList.add("scrolling");
-    } else {
-      document.body.classList.remove("scrolling");
-    }
+  const onScroll = React.useCallback(() => {
+    const { pageYOffset } = window;
+    setScrollTop(pageYOffset === 0);
   }, []);
 
   React.useEffect(() => {
-    document.body.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     // remove event on unmount to prevent a memory leak
-    () => document.removeEventListener("scroll", onScroll);
+    () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -55,7 +50,7 @@ export const NavBar: React.FC<NavBarProps> = ({
           [styles[`nav-bar--${layout}`]]: layout,
           [styles[`nav-bar--${color}`]]: color,
           [styles[`nav-bar--${align}`]]: align,
-          [styles["nav-bar--naked"]]: scrollY === 0,
+          [styles["nav-bar--naked"]]: scrollTop,
         })}
         role="navigation"
         aria-label="navigation"
@@ -65,7 +60,7 @@ export const NavBar: React.FC<NavBarProps> = ({
             <a href="/" className={styles["nav-bar__logo-link"]}>
               <span className={styles["nav-bar__logo"]}>
                 <Image
-                  src={scrollY === 0 ? Logo : LogoBlack}
+                  src={scrollTop ? Logo : LogoBlack}
                   width={65}
                   height={35}
                   alt="dpc"
