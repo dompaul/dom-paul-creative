@@ -5,6 +5,7 @@
   $this: &;
   opacity: 0;
   transform: translateY(-5rem);
+  user-select: none;
   transition: opacity 0.5s ease 0.25s, transform 0.5s ease 0.35s;
 
   &--ready {
@@ -81,7 +82,7 @@
     letter-spacing: -3px;
     margin-bottom: 2.4rem;
     opacity: 0;
-    transition: opacity 0.5s ease 1s;
+    transition: opacity 0.5s ease 0.5s;
   }
 
   @media only screen and (max-width: $mobile) {

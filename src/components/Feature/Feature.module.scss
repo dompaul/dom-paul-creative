@@ -42,7 +42,7 @@
     justify-content: center;
     opacity: 0;
     transform: translateX(-1rem);
-    transition: opacity 0.4s ease 0.1s, transform 0.2s ease;
+    transition: opacity 0.4s ease, transform 0.2s ease;
   }
 
   &__image-container {
@@ -51,15 +51,16 @@
     overflow: hidden;
     opacity: 0;
     transform: translateX(55rem);
-    transition: opacity 0.9s ease 0.15s, transform 0.5s ease 0.15s;
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
   &__title {
-    font-size: 7.2rem;
+    font-size: 6.2rem;
     margin-bottom: 1.4rem;
     font-weight: 700;
     letter-spacing: -3px;
     line-height: 7.2rem;
+    font-family: Inter;
   }
 
   &__text {

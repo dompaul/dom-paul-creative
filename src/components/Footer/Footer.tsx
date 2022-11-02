@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({
         />
         <ul className={cn(styles["footer__content-list"])}>
           <li className={cn(styles["footer__content-item"])}>{email}</li>
-          <li className={cn(styles["footer__content-item"])}>{phone}</li>
+          {/* <li className={cn(styles["footer__content-item"])}>{phone}</li> */}
         </ul>
       </div>
     </div>
