@@ -34,7 +34,14 @@ export const NavBar: React.FC<NavBarProps> = ({
 
   const onScroll = React.useCallback(() => {
     const { pageYOffset } = window;
-    setScrollTop(pageYOffset === 0);
+    if (pageYOffset > 0) {
+      setScrollTop(false);
+      return;
+    } else if (pageYOffset === 0) {
+      setScrollTop(true);
+      return;
+    }
+    return;
   }, []);
 
   React.useEffect(() => {
