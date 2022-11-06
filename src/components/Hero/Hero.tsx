@@ -32,6 +32,7 @@ export const Hero: React.FC = () => {
         ref={videoRef}
         loop
         autoPlay
+        playsInline
         muted
         className={styles["hero__video"]}
       >
