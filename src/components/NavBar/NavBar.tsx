@@ -64,6 +64,7 @@ export const NavBar: React.FC<NavBarProps> = ({
         role="navigation"
         aria-label="navigation"
       >
+        <div className={styles["nav-bar__container"]}></div>
         <div className="wrapper wrapper--nav">
           {!isActive && (
             <a href="/" className={styles["nav-bar__logo-link"]}>
