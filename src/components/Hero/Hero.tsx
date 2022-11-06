@@ -35,8 +35,8 @@ export const Hero: React.FC = () => {
         muted
         className={styles["hero__video"]}
       >
-        <source src="/videos/bg.webm" type="video/webm" />
-        <source src="/videos/bg.mp4" type="video/mp4" />
+        <source src="/videos/background-video.webm" type="video/webm" />
+        <source src="/videos/background-video.mp4" type="video/mp4" />
       </video>
       <div className={cn(styles["hero__content"])}>
         <h1 className={cn(styles["hero__title"])}>Hi. I'm Dom!</h1>

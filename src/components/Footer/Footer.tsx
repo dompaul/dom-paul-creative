@@ -30,8 +30,8 @@ export const Footer: React.FC<FooterProps> = ({
         <Image
           className={cn(styles["footer__image"])}
           src={Logo}
-          width="205px"
-          height="105px"
+          width="90px"
+          height="35px"
           alt="dpc"
         />
         <ul className={cn(styles["footer__content-list"])}>

@@ -42,7 +42,7 @@
     justify-content: center;
     opacity: 0;
     transform: translateX(-1rem);
-    transition: opacity 0.4s ease, transform 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
   }
 
   &__image-container {
@@ -51,7 +51,7 @@
     overflow: hidden;
     opacity: 0;
     transform: translateX(55rem);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
   }
 
   &__title {
