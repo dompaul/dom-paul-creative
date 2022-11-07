@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
           Welcome to my website. I am a Web Designer & Developer that has spent
           the last 7 years building exciting digital experiences.
         </p>
-        <Button label="Get in Touch" link="#contact" modifier="hero" />
+        {/* <Button label="Get in Touch" link="#contact" modifier="hero" /> */}
       </div>
     </div>
   );
