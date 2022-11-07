@@ -10,12 +10,7 @@ import styles from "./Content.module.scss";
 export const Content: React.FC = ({ children }) => {
   return (
     <div className={cn(styles["content"])}>
-      <Mock
-        type="video"
-        url="/images/mock-website.webm"
-        fallbackUrl="/images/mock-website.mp4"
-        modifier="home"
-      />
+      <Mock type="image" url="/images/spa-ur-self-mock.webp" modifier="home" />
       <div
         className={cn(styles["content__section"], styles["content__wrapper"])}
       >
