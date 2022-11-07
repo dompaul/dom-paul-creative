@@ -22,10 +22,11 @@ export const InstagramItem: React.FC<any> = ({ url, permalink }) => {
         <div className={cn(styles["instagram-item__image-container"])}>
           <Image
             src={url}
-            width="100%"
-            height="100%"
+            width="100"
+            height="100"
             layout="responsive"
             alt="insta image"
+            unoptimized={true}
           />
         </div>
       </a>
