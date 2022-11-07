@@ -7,7 +7,7 @@ import { navigationMock } from "models/Navigation/NavigationMock";
 
 import "./Layout.module.scss";
 
-export const siteTitle = "Hi. I'm Dom!";
+export const siteTitle = "Dom Paul Creative | Web Designer & Developer";
 
 export const Layout: React.FC = ({ children }) => {
   return (
@@ -30,7 +30,7 @@ export const Layout: React.FC = ({ children }) => {
           content="width=device-width, initial-scale=1"
         ></meta>
         <meta name="twitter:card" content="summary_large_image" />
-        <title>Dom Paul Creative</title>
+        <title>{siteTitle}</title>
       </Head>
       <main>
         <NavBar options={navigationMock} naked={true} />
@@ -39,7 +39,7 @@ export const Layout: React.FC = ({ children }) => {
           text="Copyright 2022. Dom Paul Creative"
           color="dark"
           email="hello@dompaulcreative.com"
-          phone="07933426346"
+          phone="+44 7933426346"
         />
       </main>
     </>
