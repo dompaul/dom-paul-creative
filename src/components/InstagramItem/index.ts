@@ -1,0 +1,1 @@
+export { InstagramItem } from "./InstagramItem";

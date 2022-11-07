@@ -1,0 +1,15 @@
+@import "../../stylesheets/variables";
+
+.instagram-item {
+  $this: &;
+  opacity: 0;
+  display: block;
+  transition: opacity 0.25s ease;
+
+  &--ready {
+    opacity: 1;
+  }
+
+  @media only screen and (max-width: $desktop) {
+  }
+}

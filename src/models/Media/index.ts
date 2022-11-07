@@ -1,1 +1,1 @@
-export type { Video, Photo, MediaType } from './Media';
+export type { Video, Photo, MediaType, Instagram } from "./Media";

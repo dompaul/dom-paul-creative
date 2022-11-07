@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 
-import { getSortedPostsData } from "../lib/posts";
+import { getInstaPosts } from "../lib/instagram";
 import { Layout } from "../components/Layout";
 import { Hero } from "../components/Hero";
 import { Content } from "../components/Content";
@@ -8,12 +8,14 @@ import { PathHeader } from "../components/PathHeader";
 import { ServiceWrapper } from "components/ServiceWrapper";
 import { FeatureWrapper } from "components/FeatureWrapper";
 import { About } from "components/About";
+import { InstagramFeed } from "components/InstagramFeed";
 import { SignUpForm } from "components/SignUpForm";
 import { servicesMock } from "models/Service";
 import { featuresMock } from "models/Feature";
+import { Instagram } from "models/Media";
 import { ToastContainer } from "react-toastify";
 
-const Home: React.FC = () => (
+const Home: React.FC<any> = ({ posts }) => (
   <Layout>
     <Hero />
     <Content>
@@ -32,6 +34,11 @@ const Home: React.FC = () => (
       <PathHeader title="Work" summary="My Portfolio" />
       <FeatureWrapper features={featuresMock} />
 
+      {/* Photography section here */}
+      <div className="anchor" id="photography"></div>
+      <PathHeader title="Photography" summary="Recent Photos" />
+      <InstagramFeed posts={posts} />
+
       {/* Contact section here */}
       <div className="anchor" id="contact"></div>
       <PathHeader title="Contact" summary="Get in Touch" />
@@ -43,11 +50,17 @@ const Home: React.FC = () => (
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = getSortedPostsData();
+export async function getStaticProps() {
+  let posts: Instagram[];
+  try {
+    const response = await getInstaPosts();
+    posts = response.data;
+  } catch {
+    posts = [];
+  }
   return {
     props: {
-      posts,
+      posts, // returns either [] or the edges returned from the Instagram API based on the response from the `getPhotosByUsername` API call
     },
   };
-};
+}

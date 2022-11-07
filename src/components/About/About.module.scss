@@ -80,4 +80,15 @@
       text-align: center;
     }
   }
+
+  @media only screen and (max-width: $mobile) {
+    &__text-main {
+      display: none;
+    }
+
+    &__text-about {
+      text-align: center;
+      padding: 0 1rem;
+    }
+  }
 }
