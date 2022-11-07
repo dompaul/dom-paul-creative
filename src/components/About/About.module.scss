@@ -24,7 +24,7 @@
     margin: 0 auto;
     transform: translateY(1rem);
     opacity: 0;
-    transition: opacity 0.4s ease 0.4s, transform 0.4s ease 0.4s;
+    transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
 
     &::after {
       content: "";
@@ -50,7 +50,7 @@
     column-gap: 4rem;
     transform: translateY(1rem);
     opacity: 0;
-    transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+    transition: opacity 0.4s ease, transform 0.4s ease;
   }
 
   &__text-main {
