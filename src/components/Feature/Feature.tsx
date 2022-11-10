@@ -19,7 +19,7 @@ export const Feature: React.FC<FeatureProps> = ({
   inverted,
 }) => {
   const { ref, inView } = useInView({
-    threshold: 0.25,
+    threshold: 0.03,
     triggerOnce: true,
   });
   return (

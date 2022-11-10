@@ -8,7 +8,7 @@ import styles from "./Service.module.scss";
 
 export const Service: React.FC<ServiceProps> = ({ icon, title, text }) => {
   const { ref, inView } = useInView({
-    threshold: 0.25,
+    threshold: 0.03,
     triggerOnce: true,
   });
   return (

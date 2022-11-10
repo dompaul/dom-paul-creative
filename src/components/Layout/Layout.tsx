@@ -38,6 +38,7 @@ export const Layout: React.FC = ({ children }) => {
           color="dark"
           email="hello@dompaulcreative.com"
           phone="+44 7933426346"
+          github="https://github.com/dompaul"
         />
       </main>
     </>

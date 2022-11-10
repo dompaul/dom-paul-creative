@@ -51,6 +51,15 @@
     color: $white !important;
     text-decoration: none;
     font-style: normal;
+
+    a {
+      text-decoration: none;
+      color: $white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__main {
@@ -79,6 +88,10 @@
     &__content-wrapper {
       flex-direction: column;
       margin-top: -5rem;
+
+      span {
+        height: 5rem !important;
+      }
     }
 
     &__content-list {

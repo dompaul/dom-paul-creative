@@ -6,7 +6,7 @@ import styles from "./About.module.scss";
 
 export const About: React.FC = () => {
   const { ref, inView } = useInView({
-    threshold: 0.25,
+    threshold: 0.03,
     triggerOnce: true,
   });
   return (

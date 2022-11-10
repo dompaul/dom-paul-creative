@@ -11,6 +11,7 @@ interface FooterProps {
   color?: ColourType;
   phone: string;
   email: string;
+  github: string;
 }
 
 export const Footer: React.FC<FooterProps> = ({
@@ -18,6 +19,7 @@ export const Footer: React.FC<FooterProps> = ({
   color = "white",
   phone,
   email,
+  github,
 }) => (
   <footer
     className={cn(styles["footer"], {
@@ -30,13 +32,18 @@ export const Footer: React.FC<FooterProps> = ({
         <Image
           className={cn(styles["footer__image"])}
           src={Logo}
-          width="144px"
-          height="35px"
+          width="190px"
+          height="25px"
           alt="dpc"
         />
         <ul className={cn(styles["footer__content-list"])}>
           <li className={cn(styles["footer__content-item"])}>{email}</li>
           <li className={cn(styles["footer__content-item"])}>{phone}</li>
+          <li className={cn(styles["footer__content-item"])}>
+            <a href={github} target="_blank">
+              GitHub
+            </a>
+          </li>
         </ul>
       </div>
     </div>

@@ -12,7 +12,7 @@ export const InstagramItem: React.FC<Instagram> = ({
   permalink,
 }) => {
   const { ref, inView } = useInView({
-    threshold: 0.25,
+    threshold: 0.03,
     triggerOnce: true,
   });
   return (
