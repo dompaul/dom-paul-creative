@@ -1,6 +1,6 @@
-import cn from 'classnames';
+import cn from "classnames";
 
-import styles from './Label.module.scss';
+import styles from "./Label.module.scss";
 
 interface LabelProps {
   text: string;
@@ -17,9 +17,9 @@ export const Label: React.FC<LabelProps> = ({
 }) => (
   <label
     htmlFor={htmlFor}
-    className={cn(styles['label'], {
-      [styles['label--focus']]: focus,
-      [styles['label--required']]: required,
+    className={cn(styles["label"], {
+      [styles["label--focus"]]: focus,
+      [styles["label--required"]]: required,
     })}
   >
     {text}

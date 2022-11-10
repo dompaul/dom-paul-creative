@@ -1,9 +1,7 @@
 import cn from "classnames";
-import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 import { Feature as FeatureModal } from "models/Feature";
-
 import { Button } from "components/Button";
 import { Mock } from "components/Mock";
 
@@ -21,7 +19,6 @@ export const Feature: React.FC<FeatureProps> = ({
   inverted,
 }) => {
   const { ref, inView } = useInView({
-    /* Optional options */
     threshold: 0.25,
     triggerOnce: true,
   });

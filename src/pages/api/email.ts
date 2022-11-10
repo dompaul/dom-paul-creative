@@ -57,6 +57,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(200).end();
   } catch (err) {
     res.status(500).end();
-    console.error(err);
   }
 };

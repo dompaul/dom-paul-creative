@@ -14,14 +14,11 @@ export const InstagramFeed: React.FC<InstagramFeedProps> = ({ posts }) => (
   <div className={cn(styles["instagram-feed"])}>
     <div className={cn(styles["instagram-feed__wrapper"])}>
       <ul className={styles["instagram-feed__list"]}>
-        {posts.map((item, index) => {
+        {posts.map(({ media_type, media_url, permalink }, index) => {
           return (
-            item.media_type !== "VIDEO" && (
+            media_type !== "VIDEO" && (
               <li key={index}>
-                <InstagramItem
-                  url={item.media_url}
-                  permalink={item.permalink}
-                />
+                <InstagramItem media_url={media_url} permalink={permalink} />
               </li>
             )
           );

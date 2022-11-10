@@ -1,5 +1,4 @@
 import cn from "classnames";
-import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 import styles from "./PathHeader.module.scss";
@@ -11,7 +10,6 @@ interface PathHeaderProps {
 
 export const PathHeader: React.FC<PathHeaderProps> = ({ title, summary }) => {
   const { ref, inView } = useInView({
-    /* Optional options */
     threshold: 0.25,
     triggerOnce: true,
   });

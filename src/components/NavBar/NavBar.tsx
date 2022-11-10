@@ -34,21 +34,18 @@ export const NavBar: React.FC<NavBarProps> = ({
 
   const onScroll = React.useCallback(() => {
     const { pageYOffset } = window;
-    if (pageYOffset > 0) {
-      setScrollTop(false);
-      document.body.classList.add("scrolling");
-      return;
-    } else if (pageYOffset === 0) {
+    if (pageYOffset === 0) {
       setScrollTop(true);
       document.body.classList.remove("scrolling");
       return;
     }
+    setScrollTop(false);
+    document.body.classList.add("scrolling");
     return;
   }, []);
 
   React.useEffect(() => {
     window.addEventListener("scroll", onScroll, { passive: true });
-    // remove event on unmount to prevent a memory leak
     () => window.removeEventListener("scroll", onScroll);
   }, []);
 

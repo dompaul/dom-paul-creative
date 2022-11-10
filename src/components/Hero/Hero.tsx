@@ -1,8 +1,6 @@
 import React from "react";
 import cn from "classnames";
 
-import { Button } from "components/Button";
-
 import styles from "./Hero.module.scss";
 
 export const Hero: React.FC = () => {
@@ -10,19 +8,16 @@ export const Hero: React.FC = () => {
 
   const onScroll = React.useCallback(() => {
     const { pageYOffset } = window;
-    if (pageYOffset > 0) {
-      videoRef.current.pause();
-      return;
-    } else if (pageYOffset === 0) {
+    if (pageYOffset === 0) {
       videoRef.current.play();
       return;
     }
+    videoRef.current.pause();
     return;
   }, []);
 
   React.useEffect(() => {
     window.addEventListener("scroll", onScroll, { passive: true });
-    // remove event on unmount to prevent a memory leak
     () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -45,7 +40,6 @@ export const Hero: React.FC = () => {
           Welcome to my website. I am a Web Designer & Developer that has spent
           the last 7 years building exciting digital experiences.
         </p>
-        {/* <Button label="Get in Touch" link="#contact" modifier="hero" /> */}
       </div>
     </div>
   );

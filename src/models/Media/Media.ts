@@ -21,7 +21,7 @@ export interface Photo {
 export interface Instagram {
   caption?: string;
   id?: number;
-  media_type: string;
+  media_type?: string;
   media_url?: string;
   permalink?: string;
   thumbnail_url?: string;

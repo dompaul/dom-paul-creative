@@ -9,7 +9,6 @@
   flex-direction: column;
   color: $white;
   position: relative;
-  // height: 50vh;
 
   &::before {
     content: "";
@@ -83,7 +82,6 @@
     }
 
     &__content-list {
-      // border-top: solid 1px rgba($white, 0.3);
       border-left: 0;
       padding: 2rem;
       margin-left: 0;

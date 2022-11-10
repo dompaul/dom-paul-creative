@@ -1,10 +1,8 @@
-import { GetStaticProps } from "next";
-
 import { getInstaPosts } from "../lib/instagram";
-import { Layout } from "../components/Layout";
-import { Hero } from "../components/Hero";
-import { Content } from "../components/Content";
-import { PathHeader } from "../components/PathHeader";
+import { Layout } from "components/Layout";
+import { Hero } from "components/Hero";
+import { Content } from "components/Content";
+import { PathHeader } from "components/PathHeader";
 import { ServiceWrapper } from "components/ServiceWrapper";
 import { FeatureWrapper } from "components/FeatureWrapper";
 import { About } from "components/About";
@@ -60,7 +58,7 @@ export async function getStaticProps() {
   }
   return {
     props: {
-      posts, // returns either [] or the edges returned from the Instagram API based on the response from the `getPhotosByUsername` API call
+      posts,
     },
   };
 }

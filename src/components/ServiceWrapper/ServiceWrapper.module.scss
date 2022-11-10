@@ -2,8 +2,6 @@
 @import "../../stylesheets/animations";
 
 .service-wrapper {
-  $this: &;
-
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

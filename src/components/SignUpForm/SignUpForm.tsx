@@ -43,7 +43,6 @@ export const SignUpForm: React.FC<SignUpFormProps> = ({ variant = "2" }) => {
     handleSubmit,
     formState: { errors },
     reset,
-    setValue,
   } = useForm<SignUpFormValues>({
     resolver: yupResolver(
       Yup.object().shape({

@@ -5,8 +5,6 @@ import { Footer } from "components/Footer";
 import { NavBar } from "components/NavBar";
 import { navigationMock } from "models/Navigation/NavigationMock";
 
-import "./Layout.module.scss";
-
 export const siteTitle = "Dom Paul Creative";
 
 export const Layout: React.FC = ({ children }) => {

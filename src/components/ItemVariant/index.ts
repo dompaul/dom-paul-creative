@@ -1,1 +1,0 @@
-export { ItemVariant } from './ItemVariant';
