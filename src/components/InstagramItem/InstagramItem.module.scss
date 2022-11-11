@@ -1,11 +1,28 @@
 @import "../../stylesheets/variables";
 
 .instagram-item {
-  opacity: 0;
+  $this: &;
   display: block;
-  transition: opacity 0.25s ease;
+  position: relative;
 
   &--ready {
-    opacity: 1;
+    #{$this}__image-container {
+      opacity: 1;
+    }
+  }
+
+  &__loader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+  }
+
+  &__image-container {
+    opacity: 0;
+    transition: opacity 0.25s ease;
   }
 }

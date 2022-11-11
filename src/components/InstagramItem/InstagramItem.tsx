@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 import { Instagram } from "models/Media";
+import { Loader } from "components/Loader";
 
 import styles from "./InstagramItem.module.scss";
 
@@ -11,6 +12,7 @@ export const InstagramItem: React.FC<Instagram> = ({
   media_url,
   permalink,
 }) => {
+  const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
   const { ref, inView } = useInView({
     threshold: 0.03,
     triggerOnce: true,
@@ -22,6 +24,11 @@ export const InstagramItem: React.FC<Instagram> = ({
         [styles["instagram-item--ready"]]: !!inView,
       })}
     >
+      {!isLoaded && (
+        <div className={styles["instagram-item__loader-container"]}>
+          <Loader />
+        </div>
+      )}
       <a href={permalink} target="_blank">
         <div className={cn(styles["instagram-item__image-container"])}>
           <Image
@@ -31,6 +38,7 @@ export const InstagramItem: React.FC<Instagram> = ({
             layout="responsive"
             alt="insta image"
             unoptimized={true}
+            onLoadingComplete={() => setIsLoaded(true)}
           />
         </div>
       </a>
