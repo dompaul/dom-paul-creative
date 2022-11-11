@@ -17,7 +17,7 @@ export const InstagramFeed: React.FC<InstagramFeedProps> = ({ posts }) => (
         {posts.map(({ media_type, media_url, permalink }, index) => {
           return (
             media_type !== "VIDEO" && (
-              <li key={index}>
+              <li key={index} className={styles["instagram-feed__list-item"]}>
                 <InstagramItem media_url={media_url} permalink={permalink} />
               </li>
             )

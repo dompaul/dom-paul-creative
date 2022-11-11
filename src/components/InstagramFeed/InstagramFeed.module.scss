@@ -18,6 +18,10 @@
     padding: 0;
   }
 
+  &__list-item {
+    background-color: $off-white;
+  }
+
   @media only screen and (max-width: $tablet) {
     &__list {
       grid-template-columns: repeat(3, 1fr);
