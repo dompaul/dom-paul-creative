@@ -4,10 +4,15 @@
   $this: &;
   display: block;
   position: relative;
+  transition: transform 0.25s ease;
 
   &--ready {
     #{$this}__image-container {
       opacity: 1;
+    }
+
+    &:hover {
+      transform: scale(1.02);
     }
   }
 
