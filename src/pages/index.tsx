@@ -49,16 +49,18 @@ const Home: React.FC<any> = ({ posts }) => (
 export default Home;
 
 export async function getStaticProps() {
-  let posts: Instagram[];
   try {
     const response = await getInstaPosts();
-    posts = response.data;
+    return {
+      props: {
+        posts: response.data,
+      },
+    };
   } catch {
-    posts = [];
+    return {
+      props: {
+        posts: [],
+      },
+    };
   }
-  return {
-    props: {
-      posts,
-    },
-  };
 }

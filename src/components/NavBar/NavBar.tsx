@@ -1,3 +1,4 @@
+import React from "react";
 import cn from "classnames";
 import Image from "next/image";
 
@@ -9,10 +10,9 @@ import {
 } from "models/Navigation";
 import Logo from "../../assets/images/logo.webp";
 import LogoBlack from "../../assets/images/logo-black.webp";
+import { onScroll } from "components/NavBar";
 
 import styles from "./NavBar.module.scss";
-import React from "react";
-
 interface NavBarProps {
   options: NavOption[];
   layout?: LayoutType;
@@ -32,21 +32,11 @@ export const NavBar: React.FC<NavBarProps> = ({
   const handleToggle = () => setActive(!isActive);
   const [scrollTop, setScrollTop] = React.useState<boolean>(true);
 
-  const onScroll = React.useCallback(() => {
-    const { pageYOffset } = window;
-    if (pageYOffset === 0) {
-      setScrollTop(true);
-      document.body.classList.remove("scrolling");
-      return;
-    }
-    setScrollTop(false);
-    document.body.classList.add("scrolling");
-    return;
-  }, []);
-
   React.useEffect(() => {
-    window.addEventListener("scroll", onScroll, { passive: true });
-    () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", () => onScroll(setScrollTop), {
+      passive: true,
+    });
+    () => window.removeEventListener("scroll", () => onScroll(setScrollTop));
   }, []);
 
   return (

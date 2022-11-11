@@ -1,24 +1,18 @@
 import React from "react";
 import cn from "classnames";
 
+import { onScroll } from "components/Hero";
+
 import styles from "./Hero.module.scss";
 
 export const Hero: React.FC = () => {
   const videoRef = React.useRef<HTMLVideoElement>(null);
 
-  const onScroll = React.useCallback(() => {
-    const { pageYOffset } = window;
-    if (pageYOffset === 0) {
-      videoRef.current.play();
-      return;
-    }
-    videoRef.current.pause();
-    return;
-  }, []);
-
   React.useEffect(() => {
-    window.addEventListener("scroll", onScroll, { passive: true });
-    () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", () => onScroll(videoRef), {
+      passive: true,
+    });
+    () => window.removeEventListener("scroll", () => onScroll(videoRef));
   }, []);
 
   return (
