@@ -6,4 +6,5 @@ export const footerMock: Footer = {
   email: "hello@dompaulcreative.com",
   phone: "+44 7933426346",
   github: "https://github.com/dompaul",
+  instagram: "https://www.instagram.com/dominicbpaul",
 };

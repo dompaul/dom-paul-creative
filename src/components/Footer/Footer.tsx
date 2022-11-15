@@ -12,6 +12,7 @@ interface FooterProps {
   phone: string;
   email: string;
   github: string;
+  instagram: string;
 }
 
 export const Footer: React.FC<FooterProps> = ({
@@ -20,6 +21,7 @@ export const Footer: React.FC<FooterProps> = ({
   phone,
   email,
   github,
+  instagram,
 }) => (
   <footer
     className={cn(styles["footer"], {
@@ -29,19 +31,26 @@ export const Footer: React.FC<FooterProps> = ({
   >
     <div className={cn(styles["footer__content"])}>
       <div className={cn(styles["footer__content-wrapper"])}>
-        <Image
-          className={cn(styles["footer__image"])}
-          src={Logo}
-          width="190px"
-          height="25px"
-          alt="dpc"
-        />
+        <div className={cn(styles["footer__image-container"])}>
+          <Image
+            className={cn(styles["footer__image"])}
+            src={Logo}
+            layout="fill"
+            alt="dpc"
+          />
+        </div>
+
         <ul className={cn(styles["footer__content-list"])}>
           <li className={cn(styles["footer__content-item"])}>{email}</li>
           <li className={cn(styles["footer__content-item"])}>{phone}</li>
           <li className={cn(styles["footer__content-item"])}>
             <a href={github} target="_blank">
               GitHub
+            </a>
+          </li>
+          <li className={cn(styles["footer__content-item"])}>
+            <a href={instagram} target="_blank">
+              Instagram
             </a>
           </li>
         </ul>

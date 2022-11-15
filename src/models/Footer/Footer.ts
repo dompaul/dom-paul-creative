@@ -6,4 +6,5 @@ export interface Footer {
   email: string;
   phone: string;
   github: string;
+  instagram: string;
 }

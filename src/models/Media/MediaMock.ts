@@ -1,70 +1,79 @@
-import { Video, Photo } from 'models/Media';
-
-export const videoListMock: Video[] = [
-  {
-    id: 1,
-    title: 'Video 1',
-    summary:
-      "This is Dom's first video to feature in the boilerplate and needs to span two lines",
-    src: '/videos/video.mp4',
-    type: 'video',
-    publish: '23/04/2022',
-  },
-  {
-    id: 2,
-    title: 'Video 2',
-    summary:
-      "This is Dom's first video to feature in the boilerplate and needs to span two lines",
-    src: '/videos/video2.mp4',
-    type: 'video',
-    publish: '23/04/2022',
-  },
-  {
-    id: 3,
-    title: 'Video 3',
-    summary:
-      "This is Dom's first video to feature in the boilerplate and needs to span two lines",
-    src: '/videos/video3.mp4',
-    type: 'video',
-    publish: '23/04/2022',
-  },
-];
+import { Photo } from "models/Media";
 
 export const photoListMock: Photo[] = [
   {
-    id: 1,
-    title: 'Concept One',
-    summary:
-      "This is Dom's first video to feature in the boilerplate and needs to span two lines",
-    src: '/images/_concept_1.png',
-    type: 'image',
-    publish: '23/04/2022',
+    title: "Bruges",
+    link: "https://www.instagram.com/p/CdtkFMnIl-T/",
+    src: "/images/photography/bruges.jpeg",
   },
   {
-    id: 2,
-    title: 'Concept Two',
-    summary:
-      "This is Dom's first video to feature in the boilerplate and needs to span two lines",
-    src: '/images/_concept_2.png',
-    type: 'image',
-    publish: '23/04/2022',
+    title: "Dinant",
+    link: "https://www.instagram.com/p/Cdks7OqjtN0/",
+    src: "/images/photography/dinant.jpeg",
   },
   {
-    id: 3,
-    title: 'Concept Three',
-    summary:
-      "This is Dom's first video to feature in the boilerplate and needs to span two lines",
-    src: '/images/_concept_3.png',
-    type: 'image',
-    publish: '23/04/2022',
+    title: "Durdle Door",
+    link: "https://www.instagram.com/p/CcqdFjxIvkp/",
+    src: "/images/photography/durdle-door.jpeg",
   },
   {
-    id: 4,
-    title: 'Concept Four',
-    summary:
-      "This is Dom's first video to feature in the boilerplate and needs to span two lines",
-    src: '/images/_concept_4.png',
-    type: 'image',
-    publish: '23/04/2022',
+    title: "Cappadocia",
+    link: "https://www.instagram.com/p/CXGPgqXoSnE/?hl=en",
+    src: "/images/photography/cappadocia.jpeg",
+  },
+  {
+    title: "Osaka",
+    link: "https://www.instagram.com/p/CVsywrMIFOE/?hl=en",
+    src: "/images/photography/osaka.jpeg",
+  },
+  {
+    title: "Slovenia",
+    link: "https://www.instagram.com/p/CVgJHE0od5g/?hl=en",
+    src: "/images/photography/slovenia.jpeg",
+  },
+  {
+    title: "Prague",
+    link: "https://www.instagram.com/p/CVIGrxuoYrP/?hl=en",
+    src: "/images/photography/prague-tram.jpeg",
+  },
+  {
+    title: "Tiger",
+    link: "https://www.instagram.com/p/CU-1MAHoJvX/?hl=en",
+    src: "/images/photography/tiger.jpeg",
+  },
+  {
+    title: "Lion",
+    link: "https://www.instagram.com/p/CU70c8EAo6a/?hl=en",
+    src: "/images/photography/lion.jpeg",
+  },
+  {
+    title: "Old Man Storr",
+    link: "https://www.instagram.com/p/CUDe5cUonx3/?hl=en",
+    src: "/images/photography/old-man-storr.jpeg",
+  },
+  {
+    title: "Castle Combe",
+    link: "https://www.instagram.com/p/CT_vtPKoI7m/?hl=en",
+    src: "/images/photography/castle-combe.jpeg",
+  },
+  {
+    title: "Nyhavn",
+    link: "https://www.instagram.com/p/CTfTLrJo0Li/?hl=en",
+    src: "/images/photography/nyhavn.jpeg",
+  },
+  {
+    title: "Nature",
+    link: "https://www.instagram.com/p/CTcL216oQ4l/?hl=en",
+    src: "/images/photography/nature.jpeg",
+  },
+  {
+    title: "Edinburgh",
+    link: "https://www.instagram.com/p/CTJw2EToBVh/?hl=en",
+    src: "/images/photography/edinburgh.jpeg",
+  },
+  {
+    title: "Scotland",
+    link: "https://www.instagram.com/p/CSr7j0tIpiN/?hl=en",
+    src: "/images/photography/scotland.jpeg",
   },
 ];

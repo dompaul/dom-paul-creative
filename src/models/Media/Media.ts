@@ -9,13 +9,9 @@ export interface Video {
 }
 
 export interface Photo {
-  id: number;
   title: string;
-  summary?: string;
+  link: string;
   src: string;
-  publish: string;
-  type: MediaType;
-  active?: boolean;
 }
 
 export interface Instagram {

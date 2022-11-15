@@ -3,15 +3,12 @@ import cn from "classnames";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
-import { Instagram } from "models/Media";
+import { Photo } from "models/Media";
 import { Loader } from "components/Loader";
 
 import styles from "./InstagramItem.module.scss";
 
-export const InstagramItem: React.FC<Instagram> = ({
-  media_url,
-  permalink,
-}) => {
+export const InstagramItem: React.FC<Photo> = ({ title, src, link }) => {
   const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
   const { ref, inView } = useInView({
     threshold: 0.03,
@@ -29,14 +26,14 @@ export const InstagramItem: React.FC<Instagram> = ({
           <Loader />
         </div>
       )}
-      <a href={permalink} target="_blank">
+      <a href={link} target="_blank">
         <div className={cn(styles["instagram-item__image-container"])}>
           <Image
-            src={media_url}
+            src={src}
             width="100"
             height="100"
             layout="responsive"
-            alt="insta image"
+            alt={title}
             unoptimized={true}
             onLoadingComplete={() => setIsLoaded(true)}
           />

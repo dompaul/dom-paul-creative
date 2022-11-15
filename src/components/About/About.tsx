@@ -28,7 +28,7 @@ export const About: React.FC = () => {
             fixed contracts.
           </p>
           <p className={cn(styles["about__text-about"])}>
-            I have over 7+ years of experience working in industry, with
+            I have over 7 years of experience working in industry, with
             experience working on everything from huge web applications to
             smaller bespoke multimedia installations. Outside of the tech world,
             I am a keen adventure photographer.

@@ -15,6 +15,8 @@
     max-width: 1030px;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    align-items: center;
   }
 
   &__image-container {
@@ -22,6 +24,10 @@
     width: 100%;
     margin: 0 auto;
     opacity: 0;
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50rem;
+    overflow: hidden;
     transition: opacity 0.1s ease;
 
     &::after {
@@ -37,15 +43,16 @@
     position: absolute;
     top: 0;
     left: 0;
+    object-fit: cover;
   }
 
   &__text-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     list-style: none;
-    padding: 0;
-    margin: 0 0 6rem;
-    column-gap: 4rem;
+    padding: 0 2rem 0 0;
+    grid-template-rows: auto;
+    row-gap: 4rem;
+    max-width: 40rem;
     opacity: 0;
     transition: opacity 0.1s ease;
   }
@@ -65,27 +72,35 @@
   }
 
   @media only screen and (max-width: $desktop) {
-    &__text-container {
-      grid-template-columns: repeat(1, 1fr);
-      row-gap: 2.4rem;
-      margin: 0 auto 5rem;
-      max-width: 60rem;
+    &__wrapper {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
     }
 
-    &__text-main,
-    &__text-about {
+    &__image-container {
+      width: 40rem;
+      height: 40rem;
+      border-radius: 40rem;
+    }
+
+    &__text-container {
+      flex-basis: 100%;
+      max-width: none;
+      padding: 2rem 0 0;
+    }
+
+    &__text-main {
       text-align: center;
+      font-size: 2.6rem;
+      line-height: 3.4rem;
     }
   }
 
-  @media only screen and (max-width: $mobile) {
-    &__text-main {
-      display: none;
-    }
-
-    &__text-about {
-      text-align: left;
-      padding: 0 1rem;
+  @media only screen and (max-width: $tablet) {
+    &__image-container {
+      width: 35rem;
+      height: 35rem;
+      border-radius: 35rem;
     }
   }
 }

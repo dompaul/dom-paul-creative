@@ -1,4 +1,3 @@
-import { getInstaPosts } from "../lib/instagram";
 import { Layout } from "components/Layout";
 import { Hero } from "components/Hero";
 import { Content } from "components/Content";
@@ -10,10 +9,10 @@ import { InstagramFeed } from "components/InstagramFeed";
 import { SignUpForm } from "components/SignUpForm";
 import { servicesMock } from "models/Service";
 import { featuresMock } from "models/Feature";
-import { Instagram } from "models/Media";
+import { photoListMock } from "models/Media";
 import { ToastContainer } from "react-toastify";
 
-const Home: React.FC<any> = ({ posts }) => (
+const Home: React.FC = () => (
   <Layout>
     <Hero />
     <Content>
@@ -35,7 +34,7 @@ const Home: React.FC<any> = ({ posts }) => (
       {/* Photography section here */}
       <div className="anchor" id="photography"></div>
       <PathHeader title="Photography" summary="Recent Photos" />
-      <InstagramFeed posts={posts} />
+      <InstagramFeed posts={photoListMock} />
 
       {/* Contact section here */}
       <div className="anchor" id="contact"></div>
@@ -47,20 +46,3 @@ const Home: React.FC<any> = ({ posts }) => (
 );
 
 export default Home;
-
-export async function getStaticProps() {
-  try {
-    const response = await getInstaPosts();
-    return {
-      props: {
-        posts: response.data,
-      },
-    };
-  } catch {
-    return {
-      props: {
-        posts: [],
-      },
-    };
-  }
-}
