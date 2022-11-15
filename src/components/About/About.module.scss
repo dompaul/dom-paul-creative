@@ -1,13 +1,19 @@
 @import "../../stylesheets/variables";
+@import "../../stylesheets/animations";
 
 .about {
   $this: &;
   margin: 4rem 0 0;
 
   &--ready {
-    #{$this}__image-container,
     #{$this}__text-container {
       opacity: 1;
+    }
+    #{$this}__image-container {
+      animation: fadeInScale;
+      animation-duration: 0.45s;
+      animation-delay: 0.25s;
+      animation-fill-mode: forwards;
     }
   }
 
@@ -28,7 +34,7 @@
     height: 50rem;
     border-radius: 50rem;
     overflow: hidden;
-    transition: opacity 0.1s ease;
+    transition: opacity 0.25s ease 0.2s;
 
     &::after {
       content: "";
@@ -101,6 +107,14 @@
       width: 35rem;
       height: 35rem;
       border-radius: 35rem;
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    &__image-container {
+      width: 30rem;
+      height: 30rem;
+      border-radius: 30rem;
     }
   }
 }
