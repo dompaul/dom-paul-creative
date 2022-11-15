@@ -4,6 +4,8 @@
   $this: &;
   display: block;
   position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
   transition: transform 0.25s ease;
 
   &--ready {
