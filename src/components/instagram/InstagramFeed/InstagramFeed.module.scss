@@ -1,0 +1,37 @@
+@import "../../../stylesheets/variables";
+
+.instagram-feed {
+  margin: 4rem 0;
+
+  &__wrapper {
+    max-width: 1030px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list-item {
+    background-color: $off-white;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    &__list {
+      column-gap: 1rem;
+      row-gap: 1rem;
+    }
+  }
+}
