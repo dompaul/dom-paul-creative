@@ -19,19 +19,18 @@ export const About: React.FC = () => {
       <div className={cn(styles["about__wrapper"])}>
         <div className={cn(styles["about__text-container"])}>
           <h2 className={cn(styles["about__text-main"])}>
-            Web Designer & Developer in Hertfordshire
+            Creative Developer in Hertfordshire
           </h2>
           <p className={cn(styles["about__text-about"])}>
-            My name is Dom Paul. I am a web designer and developer. I run a
-            small web design and development agency in Hertfordshire. I’m
-            available for projects, ad hoc website maintenance, or longer-term
-            fixed contracts.
+            My name is Dom Paul. I am a web designer and developer. I have over
+            7 years of industry experience, with experience working with on
+            everything from huge web applications to smaller, bespoke multimedia
+            installations.
           </p>
           <p className={cn(styles["about__text-about"])}>
-            I have over 7 years of experience working in industry, with
-            experience working on everything from huge web applications to
-            smaller bespoke multimedia installations. Outside of the tech world,
-            I am a keen adventure photographer.
+            I’m available for projects, ad hoc website maintenance, or
+            longer-term fixed contracts. Outside of the tech world, I am a keen
+            adventure photographer and cook.
           </p>
         </div>
         <div className={cn(styles["about__image-container"])}>

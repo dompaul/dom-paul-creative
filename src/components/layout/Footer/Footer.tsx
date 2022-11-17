@@ -13,6 +13,7 @@ interface FooterProps {
   email: string;
   github: string;
   instagram: string;
+  linkedin: string;
 }
 
 export const Footer: React.FC<FooterProps> = ({
@@ -22,6 +23,7 @@ export const Footer: React.FC<FooterProps> = ({
   email,
   github,
   instagram,
+  linkedin,
 }) => (
   <footer
     className={cn(styles["footer"], {
@@ -51,6 +53,11 @@ export const Footer: React.FC<FooterProps> = ({
           <li className={cn(styles["footer__content-item"])}>
             <a href={instagram} target="_blank">
               Instagram
+            </a>
+          </li>
+          <li className={cn(styles["footer__content-item"])}>
+            <a href={linkedin} target="_blank">
+              LinkedIn
             </a>
           </li>
         </ul>

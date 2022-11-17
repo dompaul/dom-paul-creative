@@ -7,4 +7,5 @@ export interface Footer {
   phone: string;
   github: string;
   instagram: string;
+  linkedin: string;
 }

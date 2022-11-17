@@ -31,8 +31,8 @@ export const Hero: React.FC = () => {
       <div className={cn(styles["hero__content"])}>
         <h1 className={cn(styles["hero__title"])}>Hi. I'm Dom!</h1>
         <p className={cn(styles["hero__text"])}>
-          Welcome to my website. I am a Web Designer & Developer that has spent
-          the last 7 years building exciting digital experiences.
+          Welcome to my website. I'm a Creative Developer that has spent the
+          last 7 years building exciting digital experiences.
         </p>
       </div>
     </div>
