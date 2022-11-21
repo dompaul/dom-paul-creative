@@ -43,8 +43,6 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         <ul className={cn(styles["footer__content-list"])}>
-          <li className={cn(styles["footer__content-item"])}>{email}</li>
-          <li className={cn(styles["footer__content-item"])}>{phone}</li>
           <li className={cn(styles["footer__content-item"])}>
             <a href={github} target="_blank">
               GitHub
@@ -60,6 +58,8 @@ export const Footer: React.FC<FooterProps> = ({
               LinkedIn
             </a>
           </li>
+          <li className={cn(styles["footer__content-item"])}>{email}</li>
+          <li className={cn(styles["footer__content-item"])}>{phone}</li>
         </ul>
       </div>
     </div>
